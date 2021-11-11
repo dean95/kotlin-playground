@@ -1,4 +1,4 @@
-package algorithmsAndDataStructures.selectionSort
+package algorithmsAndDataStructures.sort
 
 private fun main() {
     val input = intArrayOf()
