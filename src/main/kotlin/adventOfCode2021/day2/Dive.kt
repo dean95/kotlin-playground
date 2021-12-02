@@ -10,9 +10,8 @@ private fun main() {
     var aim = 0
 
     input.forEach {
-        val parts = it.split(" ")
-        val value = parts[1].toInt()
-        when (val command = parts.first()) {
+        val value = it.substringAfter(" ").toInt()
+        when (val command = it.substringBefore(" ")) {
             "forward" -> {
                 horizontalPosition += value
                 depth += value * aim
