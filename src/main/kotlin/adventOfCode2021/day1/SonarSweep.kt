@@ -34,4 +34,5 @@ private fun secondSolutions() {
 
     //Second part
     println(input.windowed(3).map { it.sum() }.zipWithNext().count { (first, second) -> second > first })
+    println(input.windowed(4).count { it[3] > it[0] }) // A + B + C <==> B + C + D
 }
