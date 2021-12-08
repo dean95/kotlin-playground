@@ -6,8 +6,7 @@ import kotlin.math.roundToInt
 
 private fun main() {
     fun part1(input: List<Int>): Int {
-        val middleIndex = input.size.let { if (it % 2 == 0) (it / 2).dec() else it / 2 }
-        val cheapestPosition = input.sorted()[middleIndex]
+        val cheapestPosition = input.run { sorted()[size / 2] }
         return input.sumOf { abs(it - cheapestPosition) }
     }
 
