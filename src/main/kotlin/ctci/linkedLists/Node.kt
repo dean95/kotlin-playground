@@ -10,6 +10,15 @@ class Node<T>(val value: T, var next: Node<T>? = null ) {
         }
         n.next = end
     }
+
+    override fun toString() = buildString {
+        var n: Node<T>? = this@Node
+        while (n != null) {
+            append(n.value)
+            if (n.next != null) append(", ")
+            n = n.next
+        }
+    }
 }
 
 fun <T> deleteNode(head: Node<T>, value: T): Node<T>? {
