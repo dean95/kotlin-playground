@@ -1,6 +1,6 @@
 package ctci.linkedLists
 
-class Node<T>(val value: T, var next: Node<T>? = null ) {
+class Node<T>(var value: T, var next: Node<T>? = null ) {
 
     fun appendToTail(value: T) {
         val end = Node(value)
